@@ -1,0 +1,7 @@
+{
+  "files.associations": {
+    ".githooks/pre-commit": "bash"
+  },
+  "go.testFlags": ["-v"],
+  "editor.formatOnSave": true
+}

@@ -1,0 +1,21 @@
+syntax = "proto3";
+package config;
+
+option go_package = "github.com/apydox/apydox/pkg/common/config";
+
+message GetRequest {
+    string key = 1;
+}
+
+message GetResponse {
+    oneof ValueUnion {
+      int64 intValue = 1;
+      string stringValue = 2;
+      bool boolValue = 3;
+      float floatValue = 4;
+    }
+}
+
+service ConfigStore {
+    rpc Get(GetRequest) returns (GetResponse);
+}
